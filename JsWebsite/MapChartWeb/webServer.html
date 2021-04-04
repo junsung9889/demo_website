@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Custom fonts for this template-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- Custom styles for this template-->
+  <!-- <link href="css/boot.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"> </script>
+  <!-- css -->
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/navbar.css" rel="stylesheet">
+  <link href="../css/webServer.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="sisenseApp"></div>
+  <!-- TOP BAR -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top flex-md-nowrap p-0" style="background-color:black;">
+    <a class="navbar-brand" style="margin-bottom:10px; margin-left:12px;" href="../dash.html">
+      <svg width="173px" height="23px" viewBox="0 0 400 76" style="fill:white;" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M69.55 64.14v-8.89h35.62v-8.87H69.55V21.99h44.52v8.87H78.46v6.65h35.61v26.63H69.55zm52.3 0h8.91V21.99h-8.91v42.15zm165.79 0V21.99h-8.9v29.38l-26.67-29.38h-8.9v42.15h8.9v-29.4l26.71 29.4h8.86zm-97-33.26h44.69v-8.89h-44.64l-.05 8.89zm0 15.52h44.69v-8.89h-44.64l-.05 8.89zm0 17.74h44.69v-8.89h-44.64l-.05 8.89zm157.4-33.28h44.69v-8.87h-44.69v8.87zm0 15.52h44.69v-8.87h-44.69v8.87zm0 17.74h44.69v-8.87h-44.69v8.87zm-165 0V37.51h-35.58v-6.65h35.61v-8.87h-44.52v24.39h35.62v8.87h-35.62v8.89l44.49-.02zm156.76 0V37.51h-35.58v-6.65h35.61v-8.87h-44.52v24.39h35.62v8.87h-35.62v8.89l44.49-.02zM43.24 15.62L0 0v31.25l43.24-15.63zm0 43.33L0 43.33v31.24l43.24-15.62zM14.53 37.64l43.23 15.62V22.02L14.53 37.64zm25.22 33.18l18 6.5v-13l-18 6.5z" />
+      </svg></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li id='dash' class="nav-item" style="padding-right:11px;padding-left:11px;">
+          <a class="nav-link" onclick="openNav('dash')" style="color:white; font-weight:normal;">
+            <p>DASHBOARD</p>
+          </a>
+        </li>
+        <li id='sales' class="nav-item active" style="padding-right:11px;padding-left:11px;">
+          <a class="nav-link" onclick="openNav('sales')" style="color:white; font-weight:normal;">
+            <p>SALES</p>
+          </a>
+        </li>
+        <li id='finance' class="nav-item" style="padding-right:11px;padding-left:11px;">
+          <a class="nav-link" onclick="openNav('finance')" style="color:white; font-weight:normal;">
+            <p>FINANCE</p>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link play"><img src="../DEMO_IMG/start.png" width="40px" style="margin-top:8px;" /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><img src="../DEMO_IMG/Dashboard_Setting.png" width="40px" style="margin-top:8px;" /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><img src="../DEMO_IMG/quick.png" width="40px" style="margin-top:8px;" /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onclick="takeShot()"><img src="../DEMO_IMG/ppt.png" width="40px" style="margin-top:8px;" /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><img src="../DEMO_IMG/mail.png" width="40px" style="margin-top:8px;" /></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Sidebar -->
+  <div id="wrapper">
+    <!-- SIDE BAR -->
+    <div id="mySidenav" class="sidenav">
+      <div class="container">
+        <div class="row">
+          <button style="color:white; padding-top:1px; font-weight:bold" class="closebtn" onclick="closeNav('sales')">
+            DASHBOARD<div style="float:right; margin-right:6px; margin-top:1px;"><img src="../DEMO_IMG/close-arrow.png"></div></button>
+        </div>
+        <div id="sideMenu" class="row">
+          <button class="dropdown-btn">
+            <div style="line-height:37px;">
+              <img src="../DEMO_IMG/indicator.png" style=" margin-left: -6px; margin-right: 6px; float:left;">
+              Dashboard
+            </div>
+          </button>
+          <ul class="dropdown-container">
+            <li><a href="#"><img src="../DEMO_IMG/bulletnoselect.png">종합</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- side bar end -->
+    <button class="openbtn" onclick="openNav('sales')"><i class="fa fa-bars"></i></button>
+
+    <div id="main" style="display: flex; width: 96.5vw; height: 96.5vh; background-color:#fff; margin-top:-45px; margin-left:47px;">
+      <div id="mapChartFilter" style="width:15%; height:100%; background-color:#fff;border-right:1.5px solid #000;">
+        <div id="mapFilterTitle" style="width:100%; height:6%; display: flex; align-items: center; padding: 0px 1vw; font-size: 1.5vw; border:solid 1px #999; font-weight: bold; color:#fff; background-color:#aaa;">
+          Report Filter
+        </div>
+        <div id="mapFilterRender" style="width:100%; height:94%;"></div>
+      </div>
+      <div id="mapDashArea" style="display: flex; flex-direction: column; width:calc(85% - 5px); margin-left:2px; background-color:#fff;">
+        <div id="mapTitle" style="width:100%; height:4%; margin-top:0.5vw; margin-left:1vw; font-weight:bold;">
+          Sales > 지역별 매출
+        </div>
+        <div id="mapWidgetArea" style="display: flex; width:100%; height:96%;">
+          <div id="map_widget" style="width:calc(42% - 20px); height: calc(100% - 20px); background-color:#eee; margin: 10px 10px; border: solid 1px #aaa; border-top: solid 2px #000;"></div>
+          <div id="arrow" style="display: flex; justify-content: center; align-items: center; text-align: center; width:3%; height:100%; font-size: 50px;">
+            >
+          </div>
+          <div id="chart_area" style="width:55%; height:100%;">
+            <div id="chart_widget" style="width:calc(100% - 20px); height:calc(40% - 20px); background-color:#ddd; margin: 10px 10px; border: solid 1px #aaa; border-top: solid 2px #000;"></div>
+            <div id="table_widget" style="width:calc(100% - 20px); height:calc(60% - 20px); background-color:#ccc; margin: 15px 10px;  border: solid 1px #aaa; border-top: solid 2px #000;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function takeShot() {
+      let div = document.getElementById('main');
+      var myWindow = window.open("../ppt.html", "", "width=600,height=500");
+      html2canvas(div).then(function(canvas) {
+        myWindow.document.getElementById('output').appendChild(canvas);
+        myWindow.$('canvas').css('width', 500);
+        myWindow.$('canvas').css('height', 400);
+      })
+    }
+  </script>
+  <script type="text/javascript" src="https://sisense.zalesia.co.kr:8002/js/sisense.js"></script> <!-- replace with your Sisense server address -->
+  <script type="text/javascript" src="./webServer.js"></script>
+  <script type="text/javascript" src="../js/nav.js"></script>
+  <script type="text/javascript" src="../js/menu.js"></script>
+</body>
+
+</html>

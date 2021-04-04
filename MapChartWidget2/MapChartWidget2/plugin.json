@@ -1,0 +1,13 @@
+{
+    "name": "MapChartWidget2",
+    "source": [
+        "widget.js"
+    ],
+    "style": [
+        "widget123.css"
+    ],
+    "folderName": "MapChartWidget2",
+    "lastUpdate": "2021-02-18T07:35:52.743Z",
+    "isEnabled": true,
+    "version": "1.0.0"
+}

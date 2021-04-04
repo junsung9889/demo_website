@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./webServer.css">
+    <title></title>
+  </head>
+  <body>
+    <div id="sisenseApp"></div>
+    <div class="row" style="width:100%;height:100vh; padding:1vw;">
+
+      <div class="column" style="width:20%; height:100%;">
+        <div class="row" style="height:5%;">
+          <div class="title"style="padding-left:1vw;">Report Filter</div>
+        </div>
+        <div class="row" style="height:95%">
+          <div id="filters" style="width:100%;height:100%;">
+          </div>
+        </div>
+      </div>
+
+      <div class="column" style ="width:80%; height:100%;">
+        <div class="title">
+          브랜드별 매출
+        </div>
+        <div class="row" style="height:40%">
+          <div id="widget2" style="width:100%; height:100%;"></div>
+        </div>
+        <div class="title">
+          전체 매출 Top 10
+        </div>
+        <div class="row" style="height:50%">
+          <div id="widget3" style="width:100%; height:100%;"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="http://demo.zalesia.com:40845/js/sisense.js"></script>
+    <script type="text/javascript" src="./demoDB.js"></script>
+  </body>
+</html>

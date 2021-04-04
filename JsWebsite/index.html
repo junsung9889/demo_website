@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SISENSE WEBSITE</title>
+  <!-- Custom fonts for this template-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- Custom styles for this template-->
+  <!-- <link href="css/boot.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!-- font -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"> </script>
+  <!-- css -->
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/navbar.css" rel="stylesheet">
+  <link href="css/webServer.css" rel="stylesheet">
+
+<body id="page-top" style="background-color:rgba(149, 149, 149,0.65);">
+  <div id="sisenseApp"></div>
+  <div class="width:100%; height:100%" style="text-align:center; padding:3vw;">
+    <iframe id="login" style="border-radius:5px; box-shadow:0px 0px 15px grey;" width="700px" height="650px" frameborder="0" src="https://sisense.zalesia.co.kr:8002/app/main#/dashboards/60384bfc7899c4002dc8851f/widgets/60384c467899c4002dc88524?embed=true"></iframe>
+  </div>
+</body>
+
+<!-- Custom scripts for all pages-->
+
+<script type="text/javascript">
+  var timer = setInterval("checkLogin()", 2000);
+  function checkLogin() {
+    $.getScript('https://sisense.zalesia.co.kr:8002/js/sisense.js', function(data, status) {
+      console.log("logout");
+    });
+    $('html').find('script').filter(function(){
+    return $(this).attr('src') === 'https://sisense.zalesia.co.kr:8002/js/sisense.js'}).remove();
+    Sisense.connect('https://sisense.zalesia.co.kr:8002').then((app) => {
+      console.log("connect!");
+      clearInterval(timer);
+      location.replace('dash.html');
+    });
+  }
+</script>
+</body>
+
+</html>

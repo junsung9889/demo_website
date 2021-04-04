@@ -1,0 +1,43 @@
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px 0px;
+  grid-auto-rows: 30vw;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  width: 31vw;
+  height: 30vw;
+}
+
+.rowt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.row_blank {
+  height: 3%;
+}
+
+.column_border {
+  width:1px;
+  height:80%;
+  background-color:#555;
+}
+
+.column{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title{
+  font-weight: bold;
+  font-size:1.5vw;
+  padding:3px;
+}

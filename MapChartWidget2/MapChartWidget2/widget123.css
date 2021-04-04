@@ -1,0 +1,47 @@
+.map_path {
+  fill: #f5f5f5;
+  stroke: #ccc;
+}
+.map_path path:hover{
+  fill:rgb(255, 208, 121);
+}
+#map .active{
+  fill: #b0e2ff;
+}
+.red_bar {
+  fill: red;
+  cursor: pointer;
+}
+
+.red_bar:hover {
+  fill: rgb(255, 133, 89);
+}
+
+.gray_bar {
+  fill: gray;
+  cursor: pointer;
+}
+
+.gray_bar:hover {
+  fill: darkgray;
+}
+
+.toolTip{
+  fill:rgb(255, 255, 255);
+  stroke: green;
+  stroke-width: 2px;
+}
+.toolTipText1{
+  padding: 3px;
+  font-size:10px;
+  font-weight: bold;
+  fill:rgb(0, 0, 0);
+  font-family: sans-serif;
+}
+.toolTipText2{
+  padding: 3px;
+  font-size:10px;
+  font-weight: bold;
+  fill:rgb(0, 0, 0);
+  font-family: sans-serif;
+}
