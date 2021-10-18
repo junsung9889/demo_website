@@ -9,6 +9,7 @@
 ( 본 WIDGET은 지도 렌더링의 목적으로만 TOPOJSON을 이용 )
 
  ![image](https://user-images.githubusercontent.com/80762743/137685094-48a5cd4f-32ca-42d5-a8c6-34e129bc3629.png)
+ 
 <WIDGET의 출력>
 
 ## 2.	REFERENCE
@@ -50,19 +51,24 @@ Filtering(d) 함수에서 시행할 수 있지만, REFRESH후에 투명도 조�
 
 기존 MapChartWidget에 추가된 기능
 #### 1.	줌 인 아웃 기능
- 
+ ![image](https://user-images.githubusercontent.com/80762743/137685921-fbc893a6-85cc-4850-8e65-76f559acfacf.png)
+
  
 #### 2.	특정 시,도 선택시 시,도 안 세부적인 구,시 별로 정보가 표시된다.
- 
+ ![image](https://user-images.githubusercontent.com/80762743/137685925-cf2718d6-016d-4f4b-b725-e1fdecd07d74.png)
+
  
 #### 3.	시,도 글자 위에 마우스 커서를 올리면 정보의 수치가 툴팁으로 표현된다.
- 
+ ![image](https://user-images.githubusercontent.com/80762743/137685935-f7f446cc-f663-4cc8-a6e4-746ce3f2bcb9.png)
+
  
 #### 4.	오른쪽 상단에 막대차트의 제목이 표현된다.
- 
+ ![image](https://user-images.githubusercontent.com/80762743/137685942-7c9d85bd-6857-41d8-9954-6d12e214d985.png)
+
  
 
 ## 코드 설명
+![image](https://user-images.githubusercontent.com/80762743/137685969-ef9484b2-a4f8-45ac-917a-4e74ca6a8023.png)
 
   
 ### setMaxScale
