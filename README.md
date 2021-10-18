@@ -1,7 +1,7 @@
 # SISENSE MAP CHART WIDGET
 
 
-## 1.	요약
+## 요약
 
  D3(v4)의 TOPOJSON기능을 활용하여 한국 지형정보를 가진 TOPOJSON(.json)으로 지도를 렌더링한 후, {지역명, 목표매출, 실제매출} 데이터를 이용해 해당 위치에 차트를 렌더링하고, 해당 차트 클릭 시 지역단위 DASHBOARD FILTERING을 수행하는 WIDGET입니다.
 
@@ -12,7 +12,7 @@
  
 <WIDGET의 출력>
 
-## 2.	REFERENCE
+## REFERENCE
 
 한국 TOPOJSON : 3가지 다른 LEVEL로 지역을 나눈 TOPOJSON 제공 (GITHUB)
 D3 TOPOJSON 활용 : D3 로 TOPOJSON을 활용하는 방법 설명 (BLOG)
@@ -20,7 +20,7 @@ SISENSE DASHBOARD FILTER : DASHBOARD FILTERING을 수행하는 함수 설명
 SISENSE METADATA-ITEM : FILTER정보를 가진 객체 설명
 SISENSE JAQL SYNTAX : FILTER정보를 가진 객체 설명
 
-## 3.	설명
+## 설명
 보다 자세한 내용은 소스코드의 주석을 참고바랍니다.
 
 ### processResult
@@ -49,7 +49,7 @@ Filtering(d) 함수에서 시행할 수 있지만, REFRESH후에 투명도 조�
 
 # MAPChartWidget2
 
-## 1. 기존 MapChartWidget에 추가된 기능
+### 기존 MapChartWidget에 추가된 기능
 
 #### 1)	줌 인 아웃 기능
  ![image](https://user-images.githubusercontent.com/80762743/137685921-fbc893a6-85cc-4850-8e65-76f559acfacf.png)
@@ -68,7 +68,7 @@ Filtering(d) 함수에서 시행할 수 있지만, REFRESH후에 투명도 조�
 
  
 
-## 2. 코드 설명
+## 코드 설명
 ![image](https://user-images.githubusercontent.com/80762743/137685969-ef9484b2-a4f8-45ac-917a-4e74ca6a8023.png)
 
   
